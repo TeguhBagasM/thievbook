@@ -25,7 +25,7 @@ const BookDetails = () => {
         if (data) {
           const { description, title, covers, subject_places, subject_times, subjects } = data;
           const newBook = {
-            description: description ? description.value : "Description not found",
+            description: description ? description.value : "No Description found",
             title: title,
             cover_img: covers ? `https://covers.openlibrary.org/b/id/${covers[0]}-L.jpg` : coverImg,
             subject_places: subject_places ? subject_places.join(", ") : "No subject places found",
@@ -52,7 +52,7 @@ const BookDetails = () => {
       <div className="container">
         <button type="button" className="flex flex-c back-btn" onClick={() => navigate("/book")}>
           <FaArrowLeft size={22} />
-          <span className="fs-18 fw-6">Go Back</span>
+          <span className="fs-18 fw-6">Back</span>
         </button>
 
         <div className="book-details-content grid">
