@@ -10,6 +10,7 @@ const SearchForm = () => {
   const navigate = useNavigate();
 
   useEffect(() => searchText.current.focus(), []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     let tempSearchTerm = searchText.current.value.trim();
@@ -35,7 +36,7 @@ const SearchForm = () => {
                 placeholder="example : The Lost World ..."
                 ref={searchText}
               />
-              <button type="submit" className="flex flex-c" onClick={handleSubmit} aria-label="Search">
+              <button type="submit" className="flex flex-c" aria-label="Search">
                 <FaSearch className="text-pink" size={32} />
               </button>
             </div>

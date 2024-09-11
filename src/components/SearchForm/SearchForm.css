@@ -1,53 +1,55 @@
 .search-form {
   width: 100%;
-  max-width: 680px;
-  margin-bottom: 10px;
+  max-width: 100%; /* Pastikan form tidak melebihi lebar layar */
+  margin: 0 auto; /* Pusatkan form */
+  padding: 0 1rem; /* Tambahkan padding horizontal */
 }
 
 .search-form-elem {
-  padding: 1.4rem;
-  border-radius: 3.8rem;
+  padding: 1rem; /* Kurangi padding untuk layar kecil */
+  border-radius: 2.5rem; /* Sesuaikan border-radius */
   display: flex;
   align-items: center;
-  background-color: #fff; /* Tambahkan background agar form terlihat lebih baik */
+  background-color: #fff; /* Background putih agar form terlihat lebih baik */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan sedikit bayangan */
 }
 
 .search-form-elem .form-control {
-  font-size: 2rem;
-  padding: 0.6rem;
+  font-size: 1.4rem; /* Sesuaikan ukuran font input di mobile */
+  padding: 0.4rem;
   flex: 1; /* Membuat input mengambil ruang maksimal */
-  border: 1px solid #ccc; /* Tambahkan border untuk input */
-  border-radius: 3.8rem; /* Tambahkan border-radius yang sama */
+  border: 1px solid #ccc; /* Border abu-abu */
+  border-radius: 2.5rem; /* Border-radius yang sama dengan container */
 }
 
 .search-form-elem .form-control::placeholder {
-  opacity: 0.9;
+  font-size: 1.2rem; /* Sesuaikan ukuran placeholder */
 }
 
 button {
   border: none;
   background: none;
   padding: 0;
-  margin-left: 1rem; /* Tambah jarak antara input dan ikon */
+  margin-left: 0.5rem; /* Kurangi jarak antara input dan tombol di layar kecil */
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   .search-form-elem {
-    padding: 1rem; /* Kurangi padding untuk layar kecil */
-    border-radius: 2.5rem;
+    padding: 1.4rem; /* Padding lebih besar untuk layar yang lebih besar */
+    border-radius: 3.8rem;
   }
 
   .search-form-elem .form-control {
-    font-size: 1.4rem; /* Sesuaikan ukuran font input di mobile */
-    padding: 0.4rem;
+    font-size: 2rem; /* Ukuran font lebih besar untuk layar lebih besar */
+    padding: 0.6rem;
   }
 
   .search-form-elem .form-control::placeholder {
-    font-size: 1.2rem; /* Sesuaikan ukuran placeholder */
+    font-size: 1.4rem; /* Sesuaikan ukuran placeholder untuk layar lebih besar */
   }
 
   button {
-    margin-left: 0.5rem; /* Kurangi jarak antara input dan tombol di layar kecil */
+    margin-left: 1rem; /* Jarak antara input dan tombol lebih besar untuk layar lebih besar */
   }
 }
