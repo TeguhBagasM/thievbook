@@ -35,7 +35,7 @@ const SearchForm = () => {
                 placeholder="example : The Lost World ..."
                 ref={searchText}
               />
-              <button type="submit" className="flex flex-c" onClick={handleSubmit}>
+              <button type="submit" className="flex flex-c" onClick={handleSubmit} aria-label="Search">
                 <FaSearch className="text-pink" size={32} />
               </button>
             </div>

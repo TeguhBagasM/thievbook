@@ -9,6 +9,7 @@
   border-radius: 3.8rem;
   display: flex;
   align-items: center;
+  background-color: #fff; /* Tambahkan background agar form terlihat lebih baik */
 }
 
 .search-form-elem .form-control {

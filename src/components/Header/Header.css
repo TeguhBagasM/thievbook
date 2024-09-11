@@ -1,18 +1,23 @@
 .header-content {
-  min-height: 80vh;
+  min-height: 90vh;
   background: linear-gradient(rgba(255, 182, 193, 0.3), rgba(255, 182, 193, 0.5)),
     url("../../images/library-img.jpg") center/cover no-repeat;
   flex-direction: column;
   background-size: cover;
   background-position: center;
+  display: flex; /* Tambahkan display flex agar konten diatur dengan baik */
+  justify-content: center; /* Pusatkan konten di tengah secara vertikal */
+  align-items: center; /* Pusatkan konten di tengah secara horizontal */
+  text-align: center; /* Pastikan teks terpusat dengan baik */
 }
 
 .header-title {
   font-size: 4.2rem;
+  margin: 0; /* Hapus margin untuk menjaga jarak yang konsisten */
 }
 
 .header-text {
-  margin-top: -1.8rem;
+  margin-top: 1.5rem; /* Ubah untuk menjaga jarak antara judul dan teks */
   margin-bottom: 2.8rem;
   opacity: 0.8;
   max-width: 770px;
@@ -21,17 +26,20 @@
 @media (max-width: 768px) {
   .header-content {
     min-height: 60vh;
-    background-size: contain; /* Mengubah background image agar sesuai dengan layar mobile */
-    background-position: top center; /* Menjaga agar gambar tetap berada di posisi atas dan tengah */
+    background-size: cover; /* Mengubah background image agar tetap menutup seluruh area */
+    background-position: center; /* Menjaga agar gambar tetap berada di tengah */
+    padding: 2rem; /* Tambahkan padding untuk memberi ruang pada konten */
   }
 
   .header-title {
     font-size: 2.5rem; /* Mengurangi ukuran teks pada tampilan mobile */
+    margin-bottom: 1rem; /* Menambahkan jarak bawah untuk judul */
   }
 
   .header-text {
     font-size: 1rem; /* Sesuaikan ukuran teks untuk mobile */
-    margin-top: -1rem;
+    margin-top: 1rem; /* Ubah untuk menjaga jarak antara teks dan konten di atas */
     margin-bottom: 2rem;
+    padding: 0 1rem; /* Tambahkan padding horizontal untuk ruang ekstra */
   }
 }
