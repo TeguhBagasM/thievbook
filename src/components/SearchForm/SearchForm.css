@@ -3,14 +3,50 @@
   max-width: 680px;
   margin-bottom: 10px;
 }
+
 .search-form-elem {
-  padding: 1.4rem 2.8rem;
+  padding: 1.4rem;
   border-radius: 3.8rem;
+  display: flex;
+  align-items: center;
 }
+
 .search-form-elem .form-control {
   font-size: 2rem;
   padding: 0.6rem;
+  flex: 1; /* Membuat input mengambil ruang maksimal */
+  border: 1px solid #ccc; /* Tambahkan border untuk input */
+  border-radius: 3.8rem; /* Tambahkan border-radius yang sama */
 }
+
 .search-form-elem .form-control::placeholder {
   opacity: 0.9;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin-left: 1rem; /* Tambah jarak antara input dan ikon */
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .search-form-elem {
+    padding: 1rem; /* Kurangi padding untuk layar kecil */
+    border-radius: 2.5rem;
+  }
+
+  .search-form-elem .form-control {
+    font-size: 1.4rem; /* Sesuaikan ukuran font input di mobile */
+    padding: 0.4rem;
+  }
+
+  .search-form-elem .form-control::placeholder {
+    font-size: 1.2rem; /* Sesuaikan ukuran placeholder */
+  }
+
+  button {
+    margin-left: 0.5rem; /* Kurangi jarak antara input dan tombol di layar kecil */
+  }
 }

@@ -3,13 +3,35 @@
   background: linear-gradient(rgba(255, 182, 193, 0.3), rgba(255, 182, 193, 0.5)),
     url("../../images/library-img.jpg") center/cover no-repeat;
   flex-direction: column;
+  background-size: cover;
+  background-position: center;
 }
+
 .header-title {
   font-size: 4.2rem;
 }
+
 .header-text {
   margin-top: -1.8rem;
   margin-bottom: 2.8rem;
   opacity: 0.8;
   max-width: 770px;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    min-height: 60vh;
+    background-size: contain; /* Mengubah background image agar sesuai dengan layar mobile */
+    background-position: top center; /* Menjaga agar gambar tetap berada di posisi atas dan tengah */
+  }
+
+  .header-title {
+    font-size: 2.5rem; /* Mengurangi ukuran teks pada tampilan mobile */
+  }
+
+  .header-text {
+    font-size: 1rem; /* Sesuaikan ukuran teks untuk mobile */
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+  }
 }
