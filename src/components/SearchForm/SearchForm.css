@@ -1,63 +1,71 @@
-/* Terapkan box-sizing pada seluruh elemen untuk menghindari masalah ukuran */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* CSS */
+.search-form-container {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto; /* Center the form */
+  padding: 0 1rem; /* Padding on mobile */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .search-form {
   width: 100%;
-  max-width: 100%; /* Pastikan form tidak melebihi lebar layar */
-  margin: 0 auto; /* Pusatkan form */
-  padding: 0 1rem; /* Tambahkan padding horizontal */
 }
 
 .search-form-elem {
-  padding: 0.8rem; /* Kurangi padding agar lebih rapi di layar kecil */
-  border-radius: 2rem; /* Sesuaikan border-radius */
   display: flex;
-  align-items: center;
-  background-color: #fff; /* Background putih agar form terlihat lebih baik */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan sedikit bayangan */
+  align-items: center; /* Center items vertically */
+  border-radius: 3.8rem;
+  overflow: hidden; /* Prevent overflow */
 }
 
 .search-form-elem .form-control {
-  font-size: 1.2rem; /* Sesuaikan ukuran font input di mobile */
-  padding: 0.5rem; /* Padding yang lebih sesuai */
-  flex: 1; /* Membuat input mengambil ruang maksimal */
-  border: 1px solid #ccc; /* Border abu-abu */
-  border-radius: 2rem; /* Border-radius yang sama dengan container */
+  flex: 1; /* Grow input to fill available space */
+  font-size: 1.6rem; /* Adjust font size */
+  padding: 0.6rem;
+  border: 1px solid #ddd; /* Border to distinguish input */
+  border-radius: 3.8rem 0 0 3.8rem; /* Round corners except right */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .search-form-elem .form-control::placeholder {
-  font-size: 1rem; /* Sesuaikan ukuran placeholder */
+  opacity: 0.9;
 }
 
-button {
+.search-form-elem .search-btn {
+  background: #f0f0f0; /* Light background for the button */
   border: none;
-  background: none;
-  padding: 0.5rem; /* Tambahkan padding yang sesuai untuk tombol */
-  margin-left: 0.5rem; /* Jarak antara input dan tombol di layar kecil */
-  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0 3.8rem 3.8rem 0; /* Round corners except left */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (min-width: 769px) {
+.search-form-elem .search-btn .icon {
+  color: #f06292; /* Color of the search icon */
+}
+
+/* Media query for mobile */
+@media (max-width: 767px) {
+  .search-form-container {
+    padding: 0; /* Remove padding for smaller screens */
+  }
+
   .search-form-elem {
-    padding: 1.2rem; /* Padding lebih besar untuk layar yang lebih besar */
-    border-radius: 3.8rem;
+    border-radius: 2rem; /* Reduce border radius */
   }
 
   .search-form-elem .form-control {
-    font-size: 1.6rem; /* Ukuran font yang lebih sesuai untuk layar lebih besar */
-    padding: 0.6rem;
+    font-size: 1.4rem; /* Smaller font size for mobile */
+    padding: 0.4rem; /* Smaller padding */
   }
 
-  .search-form-elem .form-control::placeholder {
-    font-size: 1.2rem; /* Sesuaikan ukuran placeholder untuk layar lebih besar */
+  .search-form-elem .search-btn {
+    padding: 0.4rem; /* Smaller padding for button */
   }
 
-  button {
-    padding: 0.8rem; /* Padding yang lebih besar untuk tombol di layar besar */
-    margin-left: 1rem; /* Jarak antara input dan tombol lebih besar untuk layar lebih besar */
+  .search-form-elem .search-btn .icon {
+    font-size: 1.4rem; /* Smaller icon size */
   }
 }
