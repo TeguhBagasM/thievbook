@@ -1,0 +1,69 @@
+.booklist,
+.book-details {
+  padding: 3rem 0;
+  background-color: #ece9e9;
+}
+.booklist-content {
+  gap: 3rem;
+  display: grid;
+}
+.book-item {
+  padding: 3rem 2rem;
+  border-radius: 4px;
+  background-color: var(--white-color);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px 0px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk transformasi dan shadow */
+}
+.book-item:hover {
+  transform: translateY(-3px); /* Mengangkat elemen saat hover */
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 20px 0px;
+}
+.book-item-img img {
+  max-width: 180px;
+  margin: 0 auto;
+  display: block;
+}
+.book-item-info {
+  margin-top: 2rem;
+}
+.book-item-info-item.title {
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+.book-item-info-item.author {
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+.book-item-info-item:not(.book-item-info-item.title) span:last-child {
+  opacity: 0.8;
+}
+.book-item-info-item.publish-year {
+  opacity: 0.6;
+  font-style: italic;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 600px) {
+  .booklist-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .booklist-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .book-item-img img {
+    max-width: 150px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .booklist-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .book-item-img img {
+    max-width: 120px;
+  }
+}
