@@ -1,10 +1,10 @@
-/* CSS */
+/* Enhanced and responsive Search Form */
 .search-form-container {
   width: 100%;
   max-width: 680px;
-  margin: 0 auto; /* Center the form */
-  padding: 0 1rem; /* Padding on mobile */
-  box-sizing: border-box; /* Include padding in width calculation */
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .search-form {
@@ -13,59 +13,80 @@
 
 .search-form-elem {
   display: flex;
-  align-items: center; /* Center items vertically */
+  align-items: center;
   border-radius: 3.8rem;
-  overflow: hidden; /* Prevent overflow */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  transition: box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+.search-form-elem:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
 .search-form-elem .form-control {
-  flex: 1; /* Grow input to fill available space */
-  font-size: 1.6rem; /* Adjust font size */
-  padding: 0.6rem;
-  border: 1px solid #ddd; /* Border to distinguish input */
-  border-radius: 3.8rem 0 0 3.8rem; /* Round corners except right */
-  box-sizing: border-box; /* Include padding in width calculation */
+  flex: 1;
+  font-size: 1.6rem;
+  padding: 0.6rem 1rem;
+  border: none; /* Remove border */
+  border-radius: 3.8rem 0 0 3.8rem;
+  box-sizing: border-box;
+  background-color: #f9f9f9; /* Light background */
+  transition: background-color 0.3s ease;
+}
+
+.search-form-elem .form-control:focus {
+  outline: none; /* Remove default outline */
+  background-color: #fff; /* Brighter background on focus */
 }
 
 .search-form-elem .form-control::placeholder {
-  opacity: 0.9;
+  opacity: 0.7;
+  color: #999;
 }
 
 .search-form-elem .search-btn {
-  background: #f0f0f0; /* Light background for the button */
+  background: linear-gradient(135deg, #f06292, #e91e63); /* Gradient background */
   border: none;
-  padding: 0.5rem;
-  border-radius: 0 3.8rem 3.8rem 0; /* Round corners except left */
-  cursor: pointer; /* Pointer cursor on hover */
+  padding: 0.8rem 1.4rem;
+  border-radius: 0 3.8rem 3.8rem 0;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.search-form-elem .search-btn:hover {
+  background: linear-gradient(135deg, #e91e63, #d81b60); /* Slightly darker gradient on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
 }
 
 .search-form-elem .search-btn .icon {
-  color: #f06292; /* Color of the search icon */
+  color: white; /* White color for search icon */
+  font-size: 1.6rem;
 }
 
 /* Media query for mobile */
 @media (max-width: 767px) {
   .search-form-container {
-    padding: 0; /* Remove padding for smaller screens */
+    padding: 0;
   }
 
   .search-form-elem {
-    border-radius: 2rem; /* Reduce border radius */
+    border-radius: 2rem;
   }
 
   .search-form-elem .form-control {
-    font-size: 1.4rem; /* Smaller font size for mobile */
-    padding: 0.4rem; /* Smaller padding */
+    font-size: 1.4rem;
+    padding: 0.4rem 0.8rem;
   }
 
   .search-form-elem .search-btn {
-    padding: 0.4rem; /* Smaller padding for button */
+    padding: 0.4rem 1rem;
   }
 
   .search-form-elem .search-btn .icon {
-    font-size: 1.4rem; /* Smaller icon size */
+    font-size: 1.4rem;
   }
 }
